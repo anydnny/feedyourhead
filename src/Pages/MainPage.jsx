@@ -13,7 +13,7 @@ const StyledMainPage = styled.main`
   font-family: ${(props) => props.theme.font.fontFamily};
   font-size: 9rem;
   padding-bottom: 3rem;
-  @media ${props => props.theme.media.phone}{
+  @media (max-width: 550px){
     font-size: 5rem;
   }
 `;
@@ -23,7 +23,9 @@ const StyledMainText = styled.h1`
   @media ${props => props.theme.media.phone}{
     line-height: 4.5rem;
   }
-  
+  @media (max-width: 550px){
+    line-height: 4.5rem;
+  }
  
 `;
 const StyledMainTextBox = styled.div` margin-top: auto;
@@ -31,7 +33,7 @@ const StyledMainTextBox = styled.div` margin-top: auto;
 const StyledSecondText = styled.p`
   font-size: 0.2em;
   text-align: right;
-  @media ${props => props.theme.media.phone}{
+  @media (max-width: 550px){
     font-size: 0.45em;
   }
 `;

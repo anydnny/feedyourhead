@@ -38,10 +38,10 @@ const mobileLinkClick = () => {
         <HeaderLogo mobileLinkClick={mobileLinkClick}/>
         {!isMobile ? <HeaderNavLinks>
           <HeaderNavItem>
-            <HeaderNavLink to="/dokumente">DOKUMENT</HeaderNavLink>
+            <HeaderNavLink to="/dokumente" hovercolor="black">Dokumente</HeaderNavLink>
           </HeaderNavItem>
           <HeaderNavItem>
-            <HeaderNavLink to="/information">INFORMATION</HeaderNavLink>
+            <HeaderNavLink to="/information" hovercolor="black">Information</HeaderNavLink>
           </HeaderNavItem>
         </HeaderNavLinks> : null}
         {isMobile ? <HeaderBurger onClick={()=>setOpenBurger(!openBurger)} openBurger={openBurger}/>: null}

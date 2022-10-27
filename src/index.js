@@ -29,7 +29,7 @@ const theme = {
       desktop: "(min-width: 769px)",
     },
     font: {
-      fontFamily: '"Helvetica Neue", "Helvetica", sans-serif',
+      fontFamily: 'Helvetica, PT Sans, Arial, sans-serif',
       color: "rgb(88, 88, 88)",
     },
     hover: {

@@ -5,6 +5,8 @@ const StyledArticleDesc = styled.p`
   font-family: ${props => props.fontFamily || props.theme.font.fontFamily};
   margin-left: 0.25rem;
   max-width: 600px;
+  text-align: justify;
+  line-height: 2rem;
   color: ${(props) => props.color || props.theme.font.color};
 `;
 const ArticleDesc = ({color, fontFamily, children}) => <StyledArticleDesc color={color} fontFamily={fontFamily}>{children}</StyledArticleDesc>

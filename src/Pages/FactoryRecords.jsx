@@ -15,6 +15,7 @@ import QuoteText from "../Components/Article/ArticleMain/QuoteText";
 import Figure from "../Components/Article/ArticleMain/Figure";
 import ArticleEnd from "../Components/Article/ArticleMain/ArticleEnd";
 import test2 from "../img/FactoryImg/hehe-low.jpg";
+import sx from "../img/FactoryImg/sx.jpeg";
 
 const StyledFactoryRecords = styled.article`
   display: flex;
@@ -54,7 +55,12 @@ const FactoryRecords = () => {
             <Paragraph>
             Несмотря на общее уныние, <ParagraphLink href="https://google.com">Hello</ParagraphLink>в городе создаются условия, способные подтолкнуть людей к творчеству: освобождается много недвижимости, которую можно использовать для проведения концертов, а также есть жители города, которые не понимают чем себя занять.
             </Paragraph>
-            
+            </ArticleSection>
+            <ArticleSection>
+              <SecondHeading>Концерт Sex Pistols</SecondHeading>
+              <Figure high={sx} width="100%" captionText="Sex Pistols" links={[{href: "https://music.yandex.ru/users/music-blog/playlists/1930", text: "Слушать на яндекс"}, {href: "https://music.yandex.ru/users/music-blog/playlists/1930", text: "Слушать на яндекс музыке"},{href: "https://music.yandex.ru/users/music-blog/playlists/1930", text: "Слушать на яндекс музыке"}]} />
+              <Paragraph>Датой зарождения музыкальной культуры Манчестера можно считать 4 июня 1976г. - день, когда в помещении "Зала свободной торговли" прошёл концерт андерграундной панк-рок группы Sex Pistols.</Paragraph>
+
             </ArticleSection>
           <ArticleEnd href="/a" author="any." />
         </ArticleMain>
