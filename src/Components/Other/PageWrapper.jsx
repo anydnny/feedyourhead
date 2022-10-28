@@ -34,7 +34,7 @@ function PageWrapper() {
   
   return (
     <>
-      <StyledPageWrapper>{articles[id]}</StyledPageWrapper>
+      <StyledPageWrapper color="white">{articles[id]}</StyledPageWrapper>
       <ArticleFooter
         links={[
           { href: "/1", text: "Instagram" },

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const StyledMainPage = styled.main`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +13,7 @@ const StyledMainPage = styled.main`
   font-family: ${(props) => props.theme.font.fontFamily};
   font-size: 9rem;
   padding-bottom: 3rem;
+  background-color: white;
   @media (max-width: 550px){
     font-size: 5rem;
   }

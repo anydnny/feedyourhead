@@ -11,6 +11,7 @@ const StyledHeaderNavUl = styled.ul.attrs((props) => ({
   display: flex;
   justify-content: ${(props) =>
     props.flexDirection === "column" ? "flex-start" : "space-evenly"};
+    z-index: 51;
 `;
 
 const HeaderNavLinks = ({ flexDirection, children }) => (

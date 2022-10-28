@@ -3,12 +3,12 @@ import styled from "styled-components";
 import {Link} from "react-router-dom"
 const StyledHeaderNavigationLink = styled(Link)`
   transition: 0.2s ease;
-  color: ${(props) => props.color || props.theme.font.color};
+  color: ${(props) => "white" || props.theme.font.color};
   font-size: ${(props) => props.size || "1.4rem"};
   font-family: ${props => props.fontFamily || props.theme.font.fontFamily};
+  z-index: 101;
 
   &:hover {
-    color: ${props => props.hovercolor || props.theme.hover.linkColor};
     text-decoration: underline;
   }
 

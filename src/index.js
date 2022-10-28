@@ -10,11 +10,14 @@ const Global = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
+#root{
+  background-color: white;
+}
 body, #root{
   height: 100%;
 }
 html {
-  height: 100%;
+
   font-size: 62.5%;
 }
 a{

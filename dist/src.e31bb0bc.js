@@ -37848,7 +37848,9 @@ function PageWrapper() {
   (0, _react.useEffect)(function () {
     document.title = "FYH | ".concat(id.slice(id.length - 2));
   }, [id]);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledPageWrapper, null, articles[id]), /*#__PURE__*/_react.default.createElement(_ArticleFooter.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledPageWrapper, {
+    color: "white"
+  }, articles[id]), /*#__PURE__*/_react.default.createElement(_ArticleFooter.default, {
     links: [{
       href: "/1",
       text: "Instagram"
@@ -37873,7 +37875,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledMainPage = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  font-family: ", ";\n  font-size: 9rem;\n  padding-bottom: 3rem;\n  @media (max-width: 550px){\n    font-size: 5rem;\n  }\n"])), function (props) {
+var StyledMainPage = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  font-family: ", ";\n  font-size: 9rem;\n  padding-bottom: 3rem;\n  background-color: white;\n  @media (max-width: 550px){\n    font-size: 5rem;\n  }\n"])), function (props) {
   return props.theme.font.fontFamily;
 });
 var StyledMainText = _styledComponents.default.h1(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-size: 1em;\n  line-height: 8.5rem;\n  @media ", "{\n    line-height: 4.5rem;\n  }\n  @media (max-width: 550px){\n    line-height: 4.5rem;\n  }\n \n"])), function (props) {
@@ -37910,10 +37912,8 @@ var _reactRouterDom = require("react-router-dom");
 var _templateObject, _templateObject2;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledHeaderLogoWrapper = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  min-width: 9%;\n"])));
-var StyledHeaderLogoText = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  color: ", ";\n  font-family: ", ";\n"])), function (props) {
-  return props.color || props.theme.font.color;
-}, function (props) {
+var StyledHeaderLogoWrapper = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  min-width: 9%;\n  mix-blend-mode: difference;\n  ;\n"])));
+var StyledHeaderLogoText = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  color: white;\n  font-family: ", ";\n  z-index: 100;\n"])), function (props) {
   return props.fontFamily || props.theme.font.fontFamily;
 });
 function HeaderLogo(_ref) {
@@ -37941,7 +37941,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledHeaderNav = _styledComponents.default.nav(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100vw;\n  height: 10rem;\n  padding: 2rem 3rem;\n  \n  @media ", "{\n   padding: 2rem;\n  }\n\n  @media (min-width: 481px) {\n    &::after {\n      content: \" \";\n      width: 10%;\n    }\n  }\n"])), function (props) {
+var StyledHeaderNav = _styledComponents.default.nav(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100vw;\n  height: 5rem;\n  padding: 3rem 3rem;\n  \n  @media ", "{\n   padding: 2rem;\n  }\n\n  @media (min-width: 481px) {\n    &::after {\n      content: \" \";\n      width: 10%;\n    }\n  }\n"])), function (props) {
   return props.theme.media.phone;
 });
 var HeaderNav = function HeaderNav(_ref) {
@@ -37963,14 +37963,12 @@ var _reactRouterDom = require("react-router-dom");
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledHeaderNavigationLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  transition: 0.2s ease;\n  color: ", ";\n  font-size: ", ";\n  font-family: ", ";\n\n  &:hover {\n    color: ", ";\n    text-decoration: underline;\n  }\n\n  @media (max-width: 480px) {\n    font-size: 2.5rem;\n  }\n  @media ", "{\n    font-size: 4rem;\n  }\n"])), function (props) {
-  return props.color || props.theme.font.color;
+var StyledHeaderNavigationLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  transition: 0.2s ease;\n  color: ", ";\n  font-size: ", ";\n  font-family: ", ";\n  z-index: 101;\n\n  &:hover {\n    text-decoration: underline;\n  }\n\n  @media (max-width: 480px) {\n    font-size: 2.5rem;\n  }\n  @media ", "{\n    font-size: 4rem;\n  }\n"])), function (props) {
+  return "white" || props.theme.font.color;
 }, function (props) {
   return props.size || "1.4rem";
 }, function (props) {
   return props.fontFamily || props.theme.font.fontFamily;
-}, function (props) {
-  return props.hovercolor || props.theme.hover.linkColor;
 }, function (props) {
   return props.theme.media.phone;
 });
@@ -38005,7 +38003,7 @@ var StyledHeaderNavUl = _styledComponents.default.ul.attrs(function (props) {
   return {
     flexDirection: props.flexDirection || "row"
   };
-})(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: ", ";\n  width: 50%;\n  max-width: 30rem;\n  display: flex;\n  justify-content: ", ";\n"])), function (props) {
+})(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: ", ";\n  width: 50%;\n  max-width: 30rem;\n  display: flex;\n  justify-content: ", ";\n    z-index: 51;\n"])), function (props) {
   return props.flexDirection;
 }, function (props) {
   return props.flexDirection === "column" ? "flex-start" : "space-evenly";
@@ -38151,11 +38149,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 var StyledPageHeader = _styledComponents.default.header.attrs(function (props) {
   return {
-    bg: props.bg ? props.bg : "white"
+    bg: props.bg ? props.bg : "transparent"
   };
-})(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: fixed;\n  display: flex;\n  flex-direction: column;\n  background: ", ";;\n"])), function (props) {
-  return props.bg;
-});
+})(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: fixed;\n  display: flex;\n  flex-direction: column;\n  \n  z-index: 50;\n  mix-blend-mode: difference;\n  backdrop-filter: blur(2px)\n"])));
 function PageHeader(_ref) {
   var isMobile = _ref.isMobile,
     bg = _ref.bg;
@@ -38177,11 +38173,9 @@ function PageHeader(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_HeaderNav.default, null, /*#__PURE__*/_react.default.createElement(_HeaderLogo.default, {
     mobileLinkClick: mobileLinkClick
   }), !isMobile ? /*#__PURE__*/_react.default.createElement(_HeaderNavLinks.default, null, /*#__PURE__*/_react.default.createElement(_HeaderNavItem.default, null, /*#__PURE__*/_react.default.createElement(_HeaderNavLink.default, {
-    to: "/dokumente",
-    hovercolor: "black"
+    to: "/dokumente"
   }, "Dokumente")), /*#__PURE__*/_react.default.createElement(_HeaderNavItem.default, null, /*#__PURE__*/_react.default.createElement(_HeaderNavLink.default, {
-    to: "/information",
-    hovercolor: "black"
+    to: "/information"
   }, "Information"))) : null, isMobile ? /*#__PURE__*/_react.default.createElement(_HeaderBurger.default, {
     onClick: function onClick() {
       return setOpenBurger(!openBurger);
@@ -38223,46 +38217,66 @@ Object.defineProperty(exports, "__esModule", {
 exports.Dokumente = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _reactRouterDom = require("react-router-dom");
 var _ = _interopRequireDefault(require("../../../img/FactoryImg/1.png"));
 var _2 = _interopRequireDefault(require("../../../img/FactoryImg/2.png"));
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledMain = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  background-color: blue;\n  padding-top: 10rem;\n  height: 200vh;\n"])));
+var StyledMain = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  background-color: #1b1b1b;\n"])));
 var StyledSectionBox = _styledComponents.default.section.attrs(function (props) {
   return {
     bg: props.bg
   };
-})(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  padding: 5rem;\n  background-color: ", ";\n"])), function (props) {
+})(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  flex-direction: column;\n\n  padding-top: 10rem;\n  margin: 0 5rem;\n  background-color: ", ";\n  @media (min-width: 1441px) {\n    margin: 0 auto;\n    max-width: 1300px;\n  }\n  @media (min-width: 426px) and (max-width: 768px){\n    margin: 0 2.5rem;\n  }\n"])), function (props) {
   return props.bg;
 });
-var StyledContentRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  \n  position: ", " ;\n  top: ", " ;\n"])), function (props) {
+var StyledContentRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n\n  position: ", ";\n  top: ", ";\n"])), function (props) {
   return props.position || "static";
 }, function (props) {
   return props.top || "0";
 });
-var StyledImgContainer = _styledComponents.default.figure(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  max-width: 37.5%;\n"])));
-var StyledDiv = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  height: 500px;\n  \n  display: ", ";\n  align-items: ", ";\n"])), function (props) {
+var StyledImgContainer = _styledComponents.default.figure(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  max-width: 37.5%;\n  @media (max-width: 1024px) {\n    max-width: 45%;\n  }\n"])));
+var StyledDiv = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  height: 500px;\n\n  display: ", ";\n  align-items: ", ";\n  padding: ", ";\n\n  @media (max-width: 1024px) {\n    width: 53%;\n  }\n  \n"])), function (props) {
   return props.width || "60%";
 }, function (props) {
-  return props.flex || "block";
+  return props.display || "block";
 }, function (props) {
   return props.align;
+}, function (props) {
+  return props.padding;
 });
-var StyledH1 = _styledComponents.default.h1(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 9.6rem;\n  line-height: 9.024rem;\n  font-family: Arial, Helvetica, sans-serif, sans-serif;\n  color: white;\n  width: 70%;\n  position: sticky;\n  top: 100px;\n"])));
-var StyledPar = _styledComponents.default.p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["font-size: 2.3rem; color: white; text-align: right"])));
+var StyledH1 = _styledComponents.default.h1(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 9.6rem;\n  line-height: 9.024rem;\n  font-family: ", ";\n  color: white;\n  width: 70%;\n  position: sticky;\n  top: 100px;\n\n  @media (max-width: 1024px) {\n    font-size: 6rem;\n    line-height: 5.5rem;\n  }\n  @media (max-width: 660px) {\n    font-size: 4rem;\n    line-height: 3.5rem;\n  }\n"])), function (props) {
+  return props.theme.font.fontFamily;
+});
+var StyledPar = _styledComponents.default.p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-size: 3rem;\n  color: white;\n  text-align: right;\n  font-family: ", ";\n  font-weight: lighter;\n  word-wrap: nowrap;\n  width: 84%;\n  margin-left: auto;\n  line-height: 135%;\n"])), function (props) {
+  return props.theme.font.fontFamily;
+});
 var StyledImg = _styledComponents.default.img.attrs(function (props) {
   return {
     width: props.width
   };
-})(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  height: auto;\n  width: ", ";\n"])), function (props) {
+})(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  height: auto;\n  width: ", ";\n  @media (max-width: 660px) {\n    width: 20rem;\n    object-fit: cover\n  }\n"])), function (props) {
   return props.width;
 });
-var StyledImgCaption = _styledComponents.default.figcaption(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral([""])));
+var StyledImgCaption = _styledComponents.default.figcaption(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  margin-top: 1rem;\n  font-family: ", ";\n  text-transform: lowercase;\n  color: white;\n  font-size: 1.2rem;\n  text-align: ", ";\n"])), function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.textAlign || "left";
+});
+var StyledBtn = _styledComponents.default.button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 1.2rem 0.8rem;\n  min-width: 50rem;\n  background-color: #fadb37;\n  mix-blend-mode: lighten;\n\n  text-transform: lowercase;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 30;\n  border: none;\n  cursor: pointer;\n  animation-name: blind;\n  animation-duration: 3s;\n  animation-iteration-count: infinite;\n  animation-timing-function: ease-in-out;\n\n  @keyframes blind {\n    from {\n      background-color: #fadb37;\n    }\n    50% {\n      background-color: #fad937a5;\n    }\n    to {\n      background-color: #fadb37;\n    }\n  }\n"])));
+var StyledBtnLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  color: #1b1b1b;\n  font-family: ", ";\n  font-size: 6.4rem;\n"])), function (props) {
+  return props.theme.font.fontFamily;
+});
+var StyledSpan = _styledComponents.default.span(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 5px;\n"])), function (props) {
+  return props.bg;
+});
 var Dokumente = function Dokumente() {
   return /*#__PURE__*/_react.default.createElement(StyledMain, null, /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
     bg: "#1B1B1B"
-  }, /*#__PURE__*/_react.default.createElement(StyledContentRow, null, /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
+  }, /*#__PURE__*/_react.default.createElement(StyledBtn, null, /*#__PURE__*/_react.default.createElement(StyledBtnLink, {
+    to: "/dokumente/fyh01"
+  }, "factory records")), /*#__PURE__*/_react.default.createElement(StyledContentRow, null, /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
     src: _2.default,
     width: "100%"
   }), /*#__PURE__*/_react.default.createElement(StyledImgCaption, null, "by KEVIN CUMMINS")), /*#__PURE__*/_react.default.createElement(StyledDiv, null, /*#__PURE__*/_react.default.createElement(StyledH1, null, "\u042D\u0442\u043E \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440, \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443"))), /*#__PURE__*/_react.default.createElement(StyledContentRow, {
@@ -38270,14 +38284,19 @@ var Dokumente = function Dokumente() {
     top: "-100px"
   }, /*#__PURE__*/_react.default.createElement(StyledDiv, {
     display: "flex",
-    align: "flex-end"
-  }, /*#__PURE__*/_react.default.createElement(StyledPar, null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C Joy Division.")), /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
+    align: "flex-end",
+    padding: "0 0 9rem 0"
+  }, /*#__PURE__*/_react.default.createElement(StyledPar, null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C", /*#__PURE__*/_react.default.createElement(StyledSpan, {
+    bg: "#588145"
+  }, "Joy\xA0Division."))), /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
     src: _.default,
     width: "100%"
-  }), /*#__PURE__*/_react.default.createElement(StyledImgCaption, null, "by KEVIN CUMMINS")))));
+  }), /*#__PURE__*/_react.default.createElement(StyledImgCaption, {
+    textAlign: "right"
+  }, "by KEVIN CUMMINS")))));
 };
 exports.Dokumente = Dokumente;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png"}],"App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png"}],"App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38322,7 +38341,7 @@ var _App = _interopRequireDefault(require("./App"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Global = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n*{ \n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nbody, #root{\n  height: 100%;\n}\nhtml {\n  height: 100%;\n  font-size: 62.5%;\n}\na{\n  text-decoration: none;\n}\n"])));
+var Global = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n*{ \n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n#root{\n  background-color: white;\n}\nbody, #root{\n  height: 100%;\n}\nhtml {\n\n  font-size: 62.5%;\n}\na{\n  text-decoration: none;\n}\n"])));
 var theme = {
   media: {
     phone: "(max-width: 480px)",
@@ -38366,7 +38385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63691" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55154" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

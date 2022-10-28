@@ -7,8 +7,8 @@ const StyledHeaderNav = styled.nav`
   justify-content: space-between;
 
   width: 100vw;
-  height: 10rem;
-  padding: 2rem 3rem;
+  height: 5rem;
+  padding: 3rem 3rem;
   
   @media ${props => props.theme.media.phone}{
    padding: 2rem;
