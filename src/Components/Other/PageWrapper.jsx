@@ -28,7 +28,7 @@ function PageWrapper() {
   const articles = {fyh01: <FactoryRecords />}
 
   useEffect(()=>{
-    document.title = `FYH | ${id.slice(id.length - 2)}`
+    document.title = `FYH ${id.slice(id.length - 2)}`
   }, [id])
   
   

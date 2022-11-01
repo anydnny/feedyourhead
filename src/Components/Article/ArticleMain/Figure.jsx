@@ -16,7 +16,7 @@ const StyledImg = styled.img.attrs((props) => ({
   width: ${(props) => props.width};
   display: block;
   height: auto;
-  max-height: 500px;
+  max-height: ${props => props.maxHeight || "50rem"};
   object-fit: contain;
   margin: 0 auto;
 `;
@@ -24,7 +24,9 @@ const StyledFigCaption = styled.figcaption`
   color: ${(props) => props.color || props.theme.font.color};
   margin-top: 1.5rem;
   font-size: 1.2rem;
+  text-transform: ${props => props.textTransform || "none"};
   font-family: ${(props) => props.fontFamily || props.theme.font.fontFamily};
+  text-align: ${props => props.textAlign || "start"};
 `;
 const StyledFigureLinkSection = styled.div`
   display: flex;
@@ -62,7 +64,10 @@ const Figure = ({
   alt,
   width,
   height,
+  maxHeight,
   captionText,
+  textTransform,
+  textAlign,
   color,
   fontFamily,
   fontSize,
@@ -100,13 +105,17 @@ const Figure = ({
         low={low}
         alt={alt}
         width={width}
-        height={height || "500"}
+        height={height || "500"} 
+        maxHeight={maxHeight}
       />
       {captionText ? (
         <StyledFigCaption
           color={color}
           fontFamily={fontFamily}
           fontSize={fontSize}
+          textTransform={textTransform}
+          textAlign={textAlign}
+          
         >
           {captionText}
         </StyledFigCaption>

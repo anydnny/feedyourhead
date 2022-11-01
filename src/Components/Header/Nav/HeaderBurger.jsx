@@ -7,6 +7,7 @@ const StyledHeaderBurger = styled.button`
   &:hover {
     cursor: pointer;
   }
+ 
 `;
 
 export default function HeaderBurger({ openBurger, ...rest }) {
@@ -20,8 +21,8 @@ export default function HeaderBurger({ openBurger, ...rest }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1 1L9 6.19157" stroke="black" />
-          <path d="M9 1L0.999996 6.19157" stroke="black" />
+          <path d="M1 1L9 6.19157" stroke="white" />
+          <path d="M9 1L0.999996 6.19157" stroke="white" />
         </svg>
       ) : (
         <svg
@@ -31,9 +32,8 @@ export default function HeaderBurger({ openBurger, ...rest }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 1H8" stroke="black" />
-          <path d="M0 4H8" stroke="black" />
-          <path d="M0 7H8" stroke="black" />
+          <path d="M0 3H8" stroke="white" />
+          <path d="M0 6H8" stroke="white" />
         </svg>
       )}
     </StyledHeaderBurger>

@@ -10,6 +10,6 @@ const StyledHeaderNavLi = styled.li`
 `;
 
 const HeaderNavItem = ({ mobileLinkClick, children }) => (
-  <StyledHeaderNavLi onClick={() => mobileLinkClick()}>{children}</StyledHeaderNavLi>
+  <StyledHeaderNavLi onClick={mobileLinkClick}>{children}</StyledHeaderNavLi>
 );
 export default HeaderNavItem;

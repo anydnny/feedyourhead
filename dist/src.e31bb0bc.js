@@ -37647,13 +37647,19 @@ var StyledImg = _styledComponents.default.img.attrs(function (props) {
     loading: props.loading || "lazy",
     alt: props.alt || "i'm so sorry, but i forgot to add a description of the picture"
   };
-})(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  max-width: 100%;\n  width: ", ";\n  display: block;\n  height: auto;\n  max-height: 500px;\n  object-fit: contain;\n  margin: 0 auto;\n"])), function (props) {
+})(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  max-width: 100%;\n  width: ", ";\n  display: block;\n  height: auto;\n  max-height: ", ";\n  object-fit: contain;\n  margin: 0 auto;\n"])), function (props) {
   return props.width;
+}, function (props) {
+  return props.maxHeight || "50rem";
 });
-var StyledFigCaption = _styledComponents.default.figcaption(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  color: ", ";\n  margin-top: 1.5rem;\n  font-size: 1.2rem;\n  font-family: ", ";\n"])), function (props) {
+var StyledFigCaption = _styledComponents.default.figcaption(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  color: ", ";\n  margin-top: 1.5rem;\n  font-size: 1.2rem;\n  text-transform: ", ";\n  font-family: ", ";\n  text-align: ", ";\n"])), function (props) {
   return props.color || props.theme.font.color;
 }, function (props) {
+  return props.textTransform || "none";
+}, function (props) {
   return props.fontFamily || props.theme.font.fontFamily;
+}, function (props) {
+  return props.textAlign || "start";
 });
 var StyledFigureLinkSection = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  margin-top: 1.5rem;\n"])));
 var StyledFigureLink = _styledComponents.default.a.attrs({
@@ -37670,7 +37676,10 @@ var Figure = function Figure(_ref) {
     alt = _ref.alt,
     width = _ref.width,
     height = _ref.height,
+    maxHeight = _ref.maxHeight,
     captionText = _ref.captionText,
+    textTransform = _ref.textTransform,
+    textAlign = _ref.textAlign,
     color = _ref.color,
     fontFamily = _ref.fontFamily,
     fontSize = _ref.fontSize,
@@ -37708,11 +37717,14 @@ var Figure = function Figure(_ref) {
     low: low,
     alt: alt,
     width: width,
-    height: height || "500"
+    height: height || "500",
+    maxHeight: maxHeight
   }), captionText ? /*#__PURE__*/_react.default.createElement(StyledFigCaption, {
     color: color,
     fontFamily: fontFamily,
-    fontSize: fontSize
+    fontSize: fontSize,
+    textTransform: textTransform,
+    textAlign: textAlign
   }, captionText) : null, links ? /*#__PURE__*/_react.default.createElement(StyledFigureLinkSection, null, links.map(function (link, index) {
     return /*#__PURE__*/_react.default.createElement(StyledFigureLink, {
       key: index,
@@ -37795,7 +37807,7 @@ var FactoryRecords = function FactoryRecords() {
     high: _heheLow.default
   }), /*#__PURE__*/_react.default.createElement(_Paragraph.default, null, "\u0412 19 \u0432\u0435\u043A\u0435 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440 \u0431\u044B\u043B \u0433\u043E\u0440\u043E\u0434\u043E\u043C \u0441 \u043F\u0440\u043E\u0446\u0432\u0435\u0442\u0430\u044E\u0449\u0435\u0439 \u044D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u043E\u0439 \u0438 \u0441\u0447\u0438\u0442\u0430\u043B\u0441\u044F \u043C\u0438\u0440\u043E\u0432\u044B\u043C \u043B\u0438\u0434\u0435\u0440\u043E\u043C \u0442\u0435\u043A\u0441\u0442\u0438\u043B\u044C\u043D\u043E\u0439 \u043F\u0440\u043E\u043C\u044B\u0448\u043B\u0435\u043D\u043D\u043E\u0441\u0442\u0438. \u0417\u0434\u0435\u0441\u044C \u043D\u0430\u0445\u043E\u0434\u0438\u043B\u0438\u0441\u044C \u0441\u0430\u043C\u044B\u0435 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u0445\u043B\u043E\u043F\u0447\u0430\u0442\u043E\u0431\u0443\u043C\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0431\u0440\u0438\u043A\u0438, \u0430 \u043C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0441\u043A\u0438\u0439 \u0441\u0443\u0434\u043E\u0445\u043E\u0434\u043D\u044B\u0439 \u043A\u0430\u043D\u0430\u043B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B\u0441\u044F \u0434\u043B\u044F \u043F\u0435\u0440\u0435\u0432\u043E\u0437\u043A\u0438 \u0433\u0440\u0443\u0437\u043E\u0432 \u043F\u043E \u0432\u0441\u0435\u0439 \u0412\u0435\u043B\u0438\u043A\u043E\u0431\u0440\u0438\u0442\u0430\u043D\u0438\u0438."), /*#__PURE__*/_react.default.createElement(_Paragraph.default, null, "\u041A \u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0435 \u0432\u0435\u043A\u0430 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u043F\u0440\u043E\u043C\u044B\u0448\u043B\u0435\u043D\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0448\u043B\u043E \u043D\u0430 \u0443\u0431\u044B\u043B\u044C, \u0444\u0430\u0431\u0440\u0438\u043A\u0438 \u0441\u0442\u0430\u043B\u0438 \u0437\u0430\u043A\u0440\u044B\u0432\u0430\u0442\u044C\u0441\u044F \u0438 \u0433\u043E\u0440\u043E\u0434 \u043D\u0430\u0447\u0430\u043B \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0432 \u0443\u043F\u0430\u0434\u043E\u043A. \u0423\u0436\u0435 \u0431\u044B\u0432\u0448\u0438\u0435 \u043F\u0440\u043E\u043C\u044B\u0448\u043B\u0435\u043D\u043D\u044B\u0435 \u0437\u043E\u043D\u044B \u0441\u0442\u0430\u043B\u0438 \u043F\u0443\u0441\u0442\u043E\u0432\u0430\u0442\u044C, \u0430 \u0430\u0442\u043C\u043E\u0441\u0444\u0435\u0440\u0430 \u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u0430\u0441\u044C \u0431\u043E\u043B\u0435\u0435 \u0434\u0435\u043F\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0439. \u041A \u0442\u043E\u043C\u0443 \u0436\u0435 \u0440\u043E\u0441\u0442 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0438\u0432\u0451\u043B \u043A \u0442\u043E\u043C\u0443, \u0447\u0442\u043E \u043D\u0435\u043A\u043E\u0433\u0434\u0430 \u043A\u0440\u0443\u043F\u043D\u044B\u0439 \u043C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0441\u043A\u0438\u0439 \u043A\u0430\u043D\u0430\u043B \u043E\u043A\u0430\u0437\u0430\u043B\u0441\u044F \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0443\u0437\u043A\u0438\u043C \u0438 \u043D\u0435 \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u043B \u0434\u043B\u044F \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0441\u0443\u0434\u043E\u0432."), /*#__PURE__*/_react.default.createElement(_Quote.default, null, /*#__PURE__*/_react.default.createElement(_QuoteText.default, {
     notQuote: true
-  }, "\u0412\u0441\u0451 \u044D\u0442\u043E \u043F\u0440\u0438\u0432\u0435\u043B\u043E \u043A \u0431\u0435\u0437\u0440\u0430\u0431\u043E\u0442\u0438\u0446\u0435 \u0438 \u043E\u0442\u0442\u043E\u043A\u0443 \u043B\u044E\u0434\u0435\u0439 \u0438\u0437 \u0433\u043E\u0440\u043E\u0434\u0430.")), /*#__PURE__*/_react.default.createElement(_Paragraph.default, null, "\u041D\u0435\u0441\u043C\u043E\u0442\u0440\u044F \u043D\u0430 \u043E\u0431\u0449\u0435\u0435 \u0443\u043D\u044B\u043D\u0438\u0435, ", /*#__PURE__*/_react.default.createElement(_ParagraphLink.default, {
+  }, "\u0412\u0441\u0451 \u044D\u0442\u043E \u043F\u0440\u0438\u0432\u0435\u043B\u043E \u043A \u0431\u0435\u0437\u0440\u0430\u0431\u043E\u0442\u0438\u0446\u0435 \u0438 \u043E\u0442\u0442\u043E\u043A\u0443 \u043B\u044E\u0434\u0435\u0439 \u0438\u0437 \u0433\u043E\u0440\u043E\u0434\u0430.")), /*#__PURE__*/_react.default.createElement(_Paragraph.default, null, "\u041D\u0435\u0441\u043C\u043E\u0442\u0440\u044F \u043D\u0430 \u043E\u0431\u0449\u0435\u0435 \u0443\u043D\u044B\u043D\u0438\u0435,", " ", /*#__PURE__*/_react.default.createElement(_ParagraphLink.default, {
     href: "https://google.com"
   }, "Hello"), "\u0432 \u0433\u043E\u0440\u043E\u0434\u0435 \u0441\u043E\u0437\u0434\u0430\u044E\u0442\u0441\u044F \u0443\u0441\u043B\u043E\u0432\u0438\u044F, \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u044B\u0435 \u043F\u043E\u0434\u0442\u043E\u043B\u043A\u043D\u0443\u0442\u044C \u043B\u044E\u0434\u0435\u0439 \u043A \u0442\u0432\u043E\u0440\u0447\u0435\u0441\u0442\u0432\u0443: \u043E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0430\u0435\u0442\u0441\u044F \u043C\u043D\u043E\u0433\u043E \u043D\u0435\u0434\u0432\u0438\u0436\u0438\u043C\u043E\u0441\u0442\u0438, \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043C\u043E\u0436\u043D\u043E \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0434\u043B\u044F \u043F\u0440\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u044F \u043A\u043E\u043D\u0446\u0435\u0440\u0442\u043E\u0432, \u0430 \u0442\u0430\u043A\u0436\u0435 \u0435\u0441\u0442\u044C \u0436\u0438\u0442\u0435\u043B\u0438 \u0433\u043E\u0440\u043E\u0434\u0430, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E\u0442 \u0447\u0435\u043C \u0441\u0435\u0431\u044F \u0437\u0430\u043D\u044F\u0442\u044C.")), /*#__PURE__*/_react.default.createElement(_ArticleSection.default, null, /*#__PURE__*/_react.default.createElement(_SecondHeading.default, null, "\u041A\u043E\u043D\u0446\u0435\u0440\u0442 Sex Pistols"), /*#__PURE__*/_react.default.createElement(_Figure.default, {
     high: _sx.default,
@@ -37846,7 +37858,7 @@ function PageWrapper() {
     fyh01: /*#__PURE__*/_react.default.createElement(_FactoryRecords.FactoryRecords, null)
   };
   (0, _react.useEffect)(function () {
-    document.title = "FYH | ".concat(id.slice(id.length - 2));
+    document.title = "FYH ".concat(id.slice(id.length - 2));
   }, [id]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledPageWrapper, {
     color: "white"
@@ -38034,9 +38046,7 @@ var HeaderNavItem = function HeaderNavItem(_ref) {
   var mobileLinkClick = _ref.mobileLinkClick,
     children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(StyledHeaderNavLi, {
-    onClick: function onClick() {
-      return mobileLinkClick();
-    }
+    onClick: mobileLinkClick
   }, children);
 };
 var _default = HeaderNavItem;
@@ -38057,7 +38067,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledHeaderBurger = _styledComponents.default.button(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  background: none;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n"])));
+var StyledHeaderBurger = _styledComponents.default.button(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  background: none;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n \n"])));
 function HeaderBurger(_ref) {
   var openBurger = _ref.openBurger,
     rest = _objectWithoutProperties(_ref, _excluded);
@@ -38071,10 +38081,10 @@ function HeaderBurger(_ref) {
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M1 1L9 6.19157",
-    stroke: "black"
+    stroke: "white"
   }), /*#__PURE__*/_react.default.createElement("path", {
     d: "M9 1L0.999996 6.19157",
-    stroke: "black"
+    stroke: "white"
   })) : /*#__PURE__*/_react.default.createElement("svg", {
     width: "20",
     height: "20",
@@ -38082,14 +38092,11 @@ function HeaderBurger(_ref) {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M0 1H8",
-    stroke: "black"
+    d: "M0 3H8",
+    stroke: "white"
   }), /*#__PURE__*/_react.default.createElement("path", {
-    d: "M0 4H8",
-    stroke: "black"
-  }), /*#__PURE__*/_react.default.createElement("path", {
-    d: "M0 7H8",
-    stroke: "black"
+    d: "M0 6H8",
+    stroke: "white"
   })));
 }
 },{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"Components/Header/Nav/HeaderBurgerNav.jsx":[function(require,module,exports) {
@@ -38107,7 +38114,7 @@ var _HeaderNavLink = _interopRequireDefault(require("./HeaderNavLink"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledBurgerNavigation = _styledComponents.default.aside(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background: white;\n  padding-left: 3rem;\n  padding-bottom: 2rem;\n"])));
+var StyledBurgerNavigation = _styledComponents.default.aside(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  width: 100vw;\n  min-height: 100px;\n  background: black;\n  padding-left: 3rem;\n  padding-bottom: 2rem;\n"])));
 function HeaderBurgerNav(_ref) {
   var mobileLinkClick = _ref.mobileLinkClick;
   return /*#__PURE__*/_react.default.createElement(StyledBurgerNavigation, null, /*#__PURE__*/_react.default.createElement(_HeaderNavLinks.default, {
@@ -38218,85 +38225,49 @@ exports.Dokumente = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _reactRouterDom = require("react-router-dom");
+var _Figure = _interopRequireDefault(require("../../Article/ArticleMain/Figure"));
 var _ = _interopRequireDefault(require("../../../img/FactoryImg/1.png"));
 var _2 = _interopRequireDefault(require("../../../img/FactoryImg/2.png"));
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledMain = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  background-color: #1b1b1b;\n"])));
-var StyledSectionBox = _styledComponents.default.section.attrs(function (props) {
-  return {
-    bg: props.bg
-  };
-})(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  flex-direction: column;\n\n  padding-top: 10rem;\n  margin: 0 5rem;\n  background-color: ", ";\n  @media (min-width: 1441px) {\n    margin: 0 auto;\n    max-width: 1300px;\n  }\n  @media (min-width: 426px) and (max-width: 768px){\n    margin: 0 2.5rem;\n  }\n"])), function (props) {
+var StyledMain = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nposition: relative;\n  background-color: ", ";\n"])), function (props) {
   return props.bg;
 });
-var StyledContentRow = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n\n  position: ", ";\n  top: ", ";\n"])), function (props) {
-  return props.position || "static";
-}, function (props) {
-  return props.top || "0";
-});
-var StyledImgContainer = _styledComponents.default.figure(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  max-width: 37.5%;\n  @media (max-width: 1024px) {\n    max-width: 45%;\n  }\n"])));
-var StyledDiv = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: ", ";\n  height: 500px;\n\n  display: ", ";\n  align-items: ", ";\n  padding: ", ";\n\n  @media (max-width: 1024px) {\n    width: 53%;\n  }\n  \n"])), function (props) {
-  return props.width || "60%";
-}, function (props) {
-  return props.display || "block";
-}, function (props) {
-  return props.align;
-}, function (props) {
-  return props.padding;
-});
-var StyledH1 = _styledComponents.default.h1(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 9.6rem;\n  line-height: 9.024rem;\n  font-family: ", ";\n  color: white;\n  width: 70%;\n  position: sticky;\n  top: 100px;\n\n  @media (max-width: 1024px) {\n    font-size: 6rem;\n    line-height: 5.5rem;\n  }\n  @media (max-width: 660px) {\n    font-size: 4rem;\n    line-height: 3.5rem;\n  }\n"])), function (props) {
-  return props.theme.font.fontFamily;
-});
-var StyledPar = _styledComponents.default.p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-size: 3rem;\n  color: white;\n  text-align: right;\n  font-family: ", ";\n  font-weight: lighter;\n  word-wrap: nowrap;\n  width: 84%;\n  margin-left: auto;\n  line-height: 135%;\n"])), function (props) {
-  return props.theme.font.fontFamily;
-});
-var StyledImg = _styledComponents.default.img.attrs(function (props) {
-  return {
-    width: props.width
-  };
-})(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  height: auto;\n  width: ", ";\n  @media (max-width: 660px) {\n    width: 20rem;\n    object-fit: cover\n  }\n"])), function (props) {
-  return props.width;
-});
-var StyledImgCaption = _styledComponents.default.figcaption(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  margin-top: 1rem;\n  font-family: ", ";\n  text-transform: lowercase;\n  color: white;\n  font-size: 1.2rem;\n  text-align: ", ";\n"])), function (props) {
-  return props.theme.font.fontFamily;
-}, function (props) {
-  return props.textAlign || "left";
-});
-var StyledBtn = _styledComponents.default.button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 1.2rem 0.8rem;\n  min-width: 50rem;\n  background-color: #fadb37;\n  mix-blend-mode: lighten;\n\n  text-transform: lowercase;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 30;\n  border: none;\n  cursor: pointer;\n  animation-name: blind;\n  animation-duration: 3s;\n  animation-iteration-count: infinite;\n  animation-timing-function: ease-in-out;\n\n  @keyframes blind {\n    from {\n      background-color: #fadb37;\n    }\n    50% {\n      background-color: #fad937a5;\n    }\n    to {\n      background-color: #fadb37;\n    }\n  }\n"])));
-var StyledBtnLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  color: #1b1b1b;\n  font-family: ", ";\n  font-size: 6.4rem;\n"])), function (props) {
-  return props.theme.font.fontFamily;
-});
-var StyledSpan = _styledComponents.default.span(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  background-color: ", ";\n  padding: 5px;\n"])), function (props) {
+var StyledLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n width: 100%;\n height: 100%;\n display: absolute;\n color: black;\n"])));
+var StyledSectionBox = _styledComponents.default.section(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  background-color: ", ";\n  padding-top: 10rem; ;\n"])), function (props) {
   return props.bg;
+});
+var StyledWrapperBox = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: auto;\n  width: 70%;\n\n  @media (max-width: 375px) {\n    width: 90%;\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    width: 80%;\n  }\n  \n"])));
+var StyledArticleHeader = _styledComponents.default.header(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-family: ", ";\n  h3 {\n    display: inline-block;\n    padding: 1rem 1.5rem;\n    background-color: white;\n    font-size: 4rem;\n    margin-bottom: 8.8rem;\n  }\n  h1 {\n    font-size: 14rem;\n    font-weight: bolder;\n    line-height: 90%;\n    color: white;\n    text-transform: uppercase;\n    text-align: center;\n    margin-bottom: 12rem;\n  }\n  p {\n    font-size: 4rem;\n    font-weight: 300;\n    color: white;\n    width: 70%;\n    text-align: center;\n    word-wrap: normal;\n    margin-bottom: 12rem;\n  }\n  & ~ p {\n    font-family: ", ";\n    font-size: 3rem;\n    font-weight: 200;\n    color: white;\n    text-align: center;\n    width: 80%;\n    line-height: 140%;\n    margin-top: 10rem;\n    margin-bottom: 12rem;\n    & span {\n      color: black;\n      background-color: #fff;\n      padding: 0.2rem 1rem;\n      white-space: nowrap;\n    }\n  }\n  @media (max-width: 375px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 5.5rem;\n      line-height: 100%;\n      margin-bottom: 20rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 6.5rem;\n    }\n    p {\n      font-size: 3rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n}\n@media ", "{\n    h1{\n      font-size: 9rem;\n    }\n    p {\n      font-size: 2.6rem;\n      margin-bottom: 6rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      font-size: 2.8rem;\n\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n"])), function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.theme.media.tablet;
 });
 var Dokumente = function Dokumente() {
-  return /*#__PURE__*/_react.default.createElement(StyledMain, null, /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
-    bg: "#1B1B1B"
-  }, /*#__PURE__*/_react.default.createElement(StyledBtn, null, /*#__PURE__*/_react.default.createElement(StyledBtnLink, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledMain, null, /*#__PURE__*/_react.default.createElement(StyledLink, {
     to: "/dokumente/fyh01"
-  }, "factory records")), /*#__PURE__*/_react.default.createElement(StyledContentRow, null, /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
-    src: _2.default,
-    width: "100%"
-  }), /*#__PURE__*/_react.default.createElement(StyledImgCaption, null, "by KEVIN CUMMINS")), /*#__PURE__*/_react.default.createElement(StyledDiv, null, /*#__PURE__*/_react.default.createElement(StyledH1, null, "\u042D\u0442\u043E \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440, \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443"))), /*#__PURE__*/_react.default.createElement(StyledContentRow, {
-    position: "relative",
-    top: "-100px"
-  }, /*#__PURE__*/_react.default.createElement(StyledDiv, {
-    display: "flex",
-    align: "flex-end",
-    padding: "0 0 9rem 0"
-  }, /*#__PURE__*/_react.default.createElement(StyledPar, null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C", /*#__PURE__*/_react.default.createElement(StyledSpan, {
-    bg: "#588145"
-  }, "Joy\xA0Division."))), /*#__PURE__*/_react.default.createElement(StyledImgContainer, null, /*#__PURE__*/_react.default.createElement(StyledImg, {
-    src: _.default,
-    width: "100%"
-  }), /*#__PURE__*/_react.default.createElement(StyledImgCaption, {
-    textAlign: "right"
-  }, "by KEVIN CUMMINS")))));
+  }, /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
+    bg: "#1B1B1B"
+  }, /*#__PURE__*/_react.default.createElement(StyledWrapperBox, null, /*#__PURE__*/_react.default.createElement(StyledArticleHeader, null, /*#__PURE__*/_react.default.createElement("h3", null, "FYH 1"), /*#__PURE__*/_react.default.createElement("h1", null, "Factory", /*#__PURE__*/_react.default.createElement("br", null), "recrods"), /*#__PURE__*/_react.default.createElement("p", null, "\u042D\u0442\u043E \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440, \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443")), /*#__PURE__*/_react.default.createElement(_Figure.default, {
+    low: _2.default,
+    high: _2.default,
+    maxHeight: "600px",
+    height: "600px",
+    color: "white",
+    textTransform: "lowercase",
+    captionText: "by KEVIN CUMMINS",
+    textAlign: "end"
+  }), /*#__PURE__*/_react.default.createElement("p", null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C ", /*#__PURE__*/_react.default.createElement("span", null, "Joy Division")))))));
 };
 exports.Dokumente = Dokumente;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png"}],"App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","../../Article/ArticleMain/Figure":"Components/Article/ArticleMain/Figure.jsx","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png"}],"App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38385,7 +38356,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55154" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64574" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

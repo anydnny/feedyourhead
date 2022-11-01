@@ -7,7 +7,7 @@ import HeaderNavLink from "./HeaderNavLink";
 const StyledBurgerNavigation = styled.aside`
   width: 100vw;
   min-height: 100px;
-  background: white;
+  background: black;
   padding-left: 3rem;
   padding-bottom: 2rem;
 `;
