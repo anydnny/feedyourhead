@@ -38215,6 +38215,8 @@ exports.Layout = Layout;
 module.exports = "/1.3570ba42.png";
 },{}],"img/FactoryImg/2.png":[function(require,module,exports) {
 module.exports = "/2.c3d1c592.png";
+},{}],"img/FactoryImg/covers.jpg":[function(require,module,exports) {
+module.exports = "/covers.ef2a04e4.jpg";
 },{}],"Components/Header/Dokumente/Dokumente.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -38228,18 +38230,22 @@ var _reactRouterDom = require("react-router-dom");
 var _Figure = _interopRequireDefault(require("../../Article/ArticleMain/Figure"));
 var _ = _interopRequireDefault(require("../../../img/FactoryImg/1.png"));
 var _2 = _interopRequireDefault(require("../../../img/FactoryImg/2.png"));
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+var _covers = _interopRequireDefault(require("../../../img/FactoryImg/covers.jpg"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var StyledMain = _styledComponents.default.main(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nposition: relative;\n  background-color: ", ";\n"])), function (props) {
+var StyledWrap = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  background-color: ", ";\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n"])), function (props) {
   return props.bg;
 });
-var StyledLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n width: 100%;\n height: 100%;\n display: absolute;\n color: black;\n"])));
-var StyledSectionBox = _styledComponents.default.section(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  background-color: ", ";\n  padding-top: 10rem; ;\n"])), function (props) {
+var StyledMain = _styledComponents.default.main(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  flex: 1 0 auto;\n"])));
+var StyledLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  display: absolute;\n  color: black;\n"])));
+var StyledSectionBox = _styledComponents.default.section(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  background-color: ", ";\n  &:first-child {\n    padding-top: 10rem;\n  }\n"])), function (props) {
   return props.bg;
 });
-var StyledWrapperBox = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: auto;\n  width: 70%;\n\n  @media (max-width: 375px) {\n    width: 90%;\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    width: 80%;\n  }\n  \n"])));
-var StyledArticleHeader = _styledComponents.default.header(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-family: ", ";\n  h3 {\n    display: inline-block;\n    padding: 1rem 1.5rem;\n    background-color: white;\n    font-size: 4rem;\n    margin-bottom: 8.8rem;\n  }\n  h1 {\n    font-size: 14rem;\n    font-weight: bolder;\n    line-height: 90%;\n    color: white;\n    text-transform: uppercase;\n    text-align: center;\n    margin-bottom: 12rem;\n  }\n  p {\n    font-size: 4rem;\n    font-weight: 300;\n    color: white;\n    width: 70%;\n    text-align: center;\n    word-wrap: normal;\n    margin-bottom: 12rem;\n  }\n  & ~ p {\n    font-family: ", ";\n    font-size: 3rem;\n    font-weight: 200;\n    color: white;\n    text-align: center;\n    width: 80%;\n    line-height: 140%;\n    margin-top: 10rem;\n    margin-bottom: 12rem;\n    & span {\n      color: black;\n      background-color: #fff;\n      padding: 0.2rem 1rem;\n      white-space: nowrap;\n    }\n  }\n  @media (max-width: 375px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 5.5rem;\n      line-height: 100%;\n      margin-bottom: 20rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 6.5rem;\n    }\n    p {\n      font-size: 3rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n}\n@media ", "{\n    h1{\n      font-size: 9rem;\n    }\n    p {\n      font-size: 2.6rem;\n      margin-bottom: 6rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      font-size: 2.8rem;\n\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n"])), function (props) {
+var StyledWrapperBox = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: auto;\n  width: ", ";\n\n  @media (max-width: 375px) {\n    width: 90%;\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    width: 80%;\n  }\n"])), function (props) {
+  return props.blockWidth || "70%";
+});
+var StyledArticleHeader = _styledComponents.default.header(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-family: ", ";\n  h3 {\n    display: inline-block;\n    padding: 1rem 1.5rem;\n    background-color: white;\n    font-size: 4rem;\n    margin-bottom: 8.8rem;\n  }\n  h1 {\n    font-size: 14rem;\n    font-weight: bolder;\n    line-height: 90%;\n    color: white;\n    text-transform: uppercase;\n    text-align: center;\n    margin-bottom: 12rem;\n  }\n  p {\n    font-size: 4rem;\n    font-weight: 300;\n    color: white;\n    width: 70%;\n    text-align: center;\n    word-wrap: normal;\n    margin-bottom: 12rem;\n  }\n  & ~ p {\n    font-family: ", ";\n    font-size: 3rem;\n    font-weight: 200;\n    color: white;\n    text-align: center;\n    width: 80%;\n    line-height: 140%;\n    margin-top: 10rem;\n    margin-bottom: 12rem;\n    & span {\n      color: black;\n      background-color: #fff;\n      padding: 0.2rem 1rem;\n      white-space: nowrap;\n    }\n  }\n  @media (max-width: 375px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 5.5rem;\n      line-height: 100%;\n      margin-bottom: 20rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n  @media (min-width: 376px) and (max-width: 480px) {\n    h3 {\n      padding: 0.5rem 1rem;\n      font-size: 3rem;\n    }\n    h1 {\n      font-size: 6.5rem;\n    }\n    p {\n      font-size: 3rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    p {\n      font-size: 2.4rem;\n      width: 100%;\n      margin-bottom: 8rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      margin-bottom: 5rem;\n      font-family: ", ";\n      font-size: 2rem;\n      text-align: left;\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n  @media ", " {\n    h1 {\n      font-size: 9rem;\n    }\n    p {\n      font-size: 2.6rem;\n      margin-bottom: 6rem;\n    }\n    & ~ p {\n      margin-top: 5rem;\n      font-size: 2.8rem;\n\n      width: 100%;\n\n      & span {\n        color: black;\n        background-color: #fff;\n        padding: 0.2rem 1rem;\n      }\n    }\n  }\n"])), function (props) {
   return props.theme.font.fontFamily;
 }, function (props) {
   return props.theme.font.fontFamily;
@@ -38250,12 +38256,70 @@ var StyledArticleHeader = _styledComponents.default.header(_templateObject5 || (
 }, function (props) {
   return props.theme.media.tablet;
 });
+var StyledBackNumber = _styledComponents.default.span(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 1;\n  font-size: 40rem;\n  font-weight: bolder;\n  color: rgba(166, 166, 166, 0.39);\n  -moz-user-select: none;\n  -khtml-user-select: none;\n  -webkit-user-select: none;\n  user-select: none;\n\n  @media ", " {\n    font-size: 20rem;\n    color: rgba(166, 166, 166, 0.21);\n  }\n  @media ", " {\n    font-size: 30rem;\n    color: rgba(166, 166, 166, 0.21);\n  }\n"])), function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.tablet;
+});
+var StyledArticleHeading1 = _styledComponents.default.h2(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  align-self: ", ";\n  font-size: 5rem;\n  background-color: #1b1b1b;\n  color: white;\n  padding: 0.5rem 2rem;\n  line-height: 93%;\n  margin-bottom: 5.5rem;\n  z-index: 2;\n\n  @media ", " {\n    font-size: 3rem;\n    align-self: center;\n  }\n  @media ", " {\n    font-size: 3rem;\n    align-self: flex-end;\n  }\n"])), function (props) {
+  return props.alignSelf;
+}, function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.tablet;
+});
+var StyledFYH11Wrap = (0, _styledComponents.default)(StyledWrapperBox)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  font-family: ", ";\n  padding: 2.5rem 0;\n  z-index: 0;\n  @media ", " {\n    padding: 2.5rem 0;\n  }\n  div {\n    align-self: flex-start;\n    border-left: 0.2rem solid black;\n    padding: 2rem;\n    width: 60%;\n    margin-bottom: 6rem;\n    z-index: 2;\n    @media ", " {\n      width: 90%;\n      padding-right: 0;\n    }\n    @media ", " {\n      width: 100%;\n    }\n    @media (min-width: 771px) and (max-width: 1024px) {\n      width: 100%;\n    }\n\n    p {\n      font-size: 3rem;\n      line-height: 135%;\n\n      @media ", " {\n        font-size: 2rem;\n        font-weight: 200;\n        text-align: start;\n      }\n      @media ", " {\n        font-size: 2rem;\n      }\n    }\n  }\n\n  p {\n    font-size: 2rem;\n    align-self: flex-end;\n    z-index: 2;\n    @media ", " {\n      font-size: 1.8rem;\n      font-weight: 200;\n      text-align: end;\n    }\n  }\n"])), function (props) {
+  return props.theme.font.fontFamily;
+}, function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.tablet;
+}, function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.tablet;
+}, function (props) {
+  return props.theme.media.phone;
+});
+var StyledArticleHeading2 = (0, _styledComponents.default)(StyledArticleHeading1)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  @media ", " {\n    align-self: flex-start;\n  }\n"])), function (props) {
+  return props.theme.media.tablet;
+});
+var StyledFYH12Wrap = (0, _styledComponents.default)(StyledFYH11Wrap)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  div {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    padding: 0;\n    margin-top: 4rem;\n    @media (max-width: 768px) {\n      flex-direction: column;\n      justify-content: flex-start;\n      border: none;\n    }\n    p {\n      margin-left: 2rem;\n      align-self: center;\n      max-width: 50%;\n\n      @media ", " {\n        align-self: flex-start;\n        margin-bottom: 5rem;\n        border-left: 2px solid black;\n        margin-left: 0;\n        padding-left: 2rem;\n        max-width: 90%;\n      }\n      @media (min-width: 481px) and (max-width: 768px) {\n        align-self: flex-start;\n        margin-bottom: 5rem;\n        border-left: 2px solid black;\n        margin-left: 0;\n        padding-left: 2rem;\n        max-width: 60%;\n      }\n    }\n    img {\n      width: 45%;\n      object-fit: contain;\n      @media ", " {\n        width: 100%;\n      }\n      @media (min-width: 481px) and (max-width: 768px) {\n        width: 80%;\n        align-self: flex-start;\n      }\n    }\n  }\n"])), function (props) {
+  return props.theme.media.phone;
+}, function (props) {
+  return props.theme.media.phone;
+});
+var StyledTeaserFooter = _styledComponents.default.footer(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n  background-color: #1b1b1b;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  flex: 1 0 auto;\n  p {\n    font-family: ", ";\n    text-align: center;\n    font-size: 4rem;\n    font-weight: 100;\n    color: white;\n    line-height: 130%;\n  }\n"])), function (props) {
+  return props.theme.font.fontFamily;
+});
+var FYH11 = function FYH11() {
+  return /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
+    bg: "#F15A26"
+  }, /*#__PURE__*/_react.default.createElement(StyledFYH11Wrap, {
+    blockWidth: "80%"
+  }, /*#__PURE__*/_react.default.createElement(StyledBackNumber, null, "1.1"), /*#__PURE__*/_react.default.createElement(StyledArticleHeading1, {
+    alignSelf: "flex-end"
+  }, "factory records", /*#__PURE__*/_react.default.createElement("br", null), "artefacts"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "\u041A\u043E\u043F\u0430\u0435\u043C\u0441\u044F \u0432 \u0441\u0442\u0440\u0430\u043D\u043D\u043E\u043C* \u043A\u0430\u0442\u0430\u043B\u043E\u0433\u0435 \u043B\u0435\u0439\u0431\u043B\u0430, \u0433\u0434\u0435 \u043C\u043E\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0432\u0441\u0451: \u043D\u0430\u0447\u0438\u043D\u0430\u044F \u043E\u0442 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u044B\u0445 \u0440\u0435\u043B\u0438\u0437\u043E\u0432 \u0438 \u043A\u043B\u0438\u043F\u043E\u0432, \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u044F \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0439 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u043A\u043E\u0439, \u0437\u0434\u0430\u043D\u0438\u044F\u043C\u0438 \u0438 \u0431\u0435\u0440\u0443\u0448\u0430\u043C\u0438.")), /*#__PURE__*/_react.default.createElement("p", null, "*\u0434\u0430\u0436\u0435 \u043D\u0430\u0448\u043B\u043E\u0441\u044C \u043C\u0435\u0441\u0442\u043E \u0434\u043B\u044F \u043A\u043E\u0442\u0430 (O_O;)")));
+};
+var FYH12 = function FYH12() {
+  return /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
+    bg: "#588145"
+  }, /*#__PURE__*/_react.default.createElement(StyledFYH12Wrap, {
+    blockWidth: "80%"
+  }, /*#__PURE__*/_react.default.createElement(StyledBackNumber, null, "1.2"), /*#__PURE__*/_react.default.createElement(StyledArticleHeading2, {
+    alignSelf: "flex-start"
+  }, "factory records", /*#__PURE__*/_react.default.createElement("br", null), "releases"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0430\u0441\u0441\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u043C \u043E 10 \u0437\u043D\u0430\u043A\u043E\u0432\u044B\u0445 \u0440\u0435\u043B\u0438\u0437\u0430\u0445 \u0432\u044B\u0445\u043E\u0434\u0438\u0432\u0448\u0438\u0445 \u043D\u0430 Factory Records."), /*#__PURE__*/_react.default.createElement("img", {
+    src: _covers.default
+  }))));
+};
 var Dokumente = function Dokumente() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledMain, null, /*#__PURE__*/_react.default.createElement(StyledLink, {
+  return /*#__PURE__*/_react.default.createElement(StyledWrap, null, /*#__PURE__*/_react.default.createElement(StyledMain, null, /*#__PURE__*/_react.default.createElement(StyledLink, {
     to: "/dokumente/fyh01"
   }, /*#__PURE__*/_react.default.createElement(StyledSectionBox, {
     bg: "#1B1B1B"
-  }, /*#__PURE__*/_react.default.createElement(StyledWrapperBox, null, /*#__PURE__*/_react.default.createElement(StyledArticleHeader, null, /*#__PURE__*/_react.default.createElement("h3", null, "FYH 1"), /*#__PURE__*/_react.default.createElement("h1", null, "Factory", /*#__PURE__*/_react.default.createElement("br", null), "recrods"), /*#__PURE__*/_react.default.createElement("p", null, "\u042D\u0442\u043E \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440, \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443")), /*#__PURE__*/_react.default.createElement(_Figure.default, {
+  }, /*#__PURE__*/_react.default.createElement(StyledWrapperBox, null, /*#__PURE__*/_react.default.createElement(StyledArticleHeader, null, /*#__PURE__*/_react.default.createElement("h3", null, "FYH 1"), /*#__PURE__*/_react.default.createElement("h1", null, "Factory", /*#__PURE__*/_react.default.createElement("br", null), "records"), /*#__PURE__*/_react.default.createElement("p", null, "\u042D\u0442\u043E \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440, \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443")), /*#__PURE__*/_react.default.createElement(_Figure.default, {
     low: _2.default,
     high: _2.default,
     maxHeight: "600px",
@@ -38264,10 +38328,10 @@ var Dokumente = function Dokumente() {
     textTransform: "lowercase",
     captionText: "by KEVIN CUMMINS",
     textAlign: "end"
-  }), /*#__PURE__*/_react.default.createElement("p", null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C ", /*#__PURE__*/_react.default.createElement("span", null, "Joy Division")))))));
+  }), /*#__PURE__*/_react.default.createElement("p", null, "\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u041C\u0430\u043D\u0447\u0435\u0441\u0442\u0435\u0440\u0430 \u0438\u0437 \u043F\u043E\u0441\u0442-\u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430 \u0432 \u043C\u0438\u0440\u043E\u0432\u0443\u044E \u0441\u0442\u043E\u043B\u0438\u0446\u0443 \u0438\u043D\u0434\u0438 \u043C\u0443\u0437\u044B\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0431\u0435\u0437\u0443\u043C\u043D\u0443\u044E \u0438\u0441\u0442\u043E\u0440\u0438\u044E \u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E \u043B\u0435\u0439\u0431\u043B\u0430, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0438\u0437\u0434\u0430\u0432\u0430\u043B\u0438\u0441\u044C ", /*#__PURE__*/_react.default.createElement("span", null, "Joy Division"))))), /*#__PURE__*/_react.default.createElement(FYH11, null), /*#__PURE__*/_react.default.createElement(FYH12, null)), /*#__PURE__*/_react.default.createElement(StyledTeaserFooter, null, /*#__PURE__*/_react.default.createElement("p", null, "FYH: 02"), /*#__PURE__*/_react.default.createElement("p", null, "sooooooon")));
 };
 exports.Dokumente = Dokumente;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","../../Article/ArticleMain/Figure":"Components/Article/ArticleMain/Figure.jsx","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png"}],"App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"../node_modules/react-router-dom/dist/index.js","../../Article/ArticleMain/Figure":"Components/Article/ArticleMain/Figure.jsx","../../../img/FactoryImg/1.png":"img/FactoryImg/1.png","../../../img/FactoryImg/2.png":"img/FactoryImg/2.png","../../../img/FactoryImg/covers.jpg":"img/FactoryImg/covers.jpg"}],"App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38356,7 +38420,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64574" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64830" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
